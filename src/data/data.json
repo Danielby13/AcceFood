@@ -2,17 +2,42 @@
   "data": [
     {
       "ID": 1,
+      "name": "מקסיקני",
+      "Opening_Hours": "7:00-23:00",
+      "type": "בשרי",
+      "accessibility": {
+        "disabled": true,
+        "blind": true,
+        "ear": true
+      },
+      "lat": 31.26197,
+      "lng": 34.75612
+    },
+    {
+      "ID": 2,
       "name": "חומוס של טחינה",
       "Opening_Hours": "9:00-22:00",
+      "type": "חלבי/פרווה",
+      "accessibility": {
+        "disabled": false,
+        "blind": false,
+        "ear": false
+      },
       "lat": 31.26505,
       "lng": 34.8008
     },
     {
-      "ID": 2,
-      "name": "מקסיקני",
-      "Opening_Hours": "7:00-23:00",
-      "lat": 31.26197,
-      "lng": 34.75612
+      "ID": 3,
+      "name": "פיצה האט",
+      "Opening_Hours": "11:00-00:30",
+      "type": "פיצה",
+      "accessibility": {
+        "disabled": true,
+        "blind": true,
+        "ear": true
+      },
+      "lat": 31.254034405327815,
+      "lng": 34.79827475761756
     }
   ]
 }
