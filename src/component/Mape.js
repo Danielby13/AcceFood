@@ -1,13 +1,14 @@
-import React, { useState } from "react";
-import { Button } from "react-bootstrap";
-import * as Data from "../data/data.json";
+import React, { useState } from 'react';
+import { Button } from 'react-bootstrap';
+import * as Data from '../data/data.json';
 import {
   withScriptjs,
   withGoogleMap,
   GoogleMap,
   Marker,
   InfoWindow,
-} from "react-google-maps";
+} from 'react-google-maps';
+
 
 function Map() {
   const [current, setCurrent] = useState(false);
@@ -17,14 +18,14 @@ function Map() {
     lng: 35.08182,
     zoom: 10,
   });
-  var x = document.getElementById("demo");
+  var x = document.getElementById('demo');
 
   function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
       setCurrent(true);
     } else {
-      x.innerHTML = "Geolocation is not supported by this browser.";
+      x.innerHTML = 'Geolocation is not supported by this browser.';
     }
   }
 
@@ -36,7 +37,7 @@ function Map() {
     });
 
     console.log(
-      "lat=" + position.lat + " lng=" + position.lng + " zoom=" + position.zoom
+      'lat=' + position.lat + ' lng=' + position.lng + ' zoom=' + position.zoom
     );
   }
 
@@ -46,11 +47,12 @@ function Map() {
       center={{ lat: position.lat, lng: position.lng }}
       //defaultOptions={{ styles: mapStyles }}
     >
-      {current ? <Marker position={position} /> : ""}
+      
+      {current ? <Marker position={position} /> : ''}
 
       <Button
         size="lg"
-        style={{ marginLeft: "50%", marginTop: "10px" }}
+        style={{ marginLeft: '50%', marginTop: '10px' }}
         variant="primary"
         onClick={getLocation}
       >
@@ -92,7 +94,7 @@ function Map() {
 const MapWrapped = withScriptjs(withGoogleMap(Map));
 export default function MapP() {
   return (
-    <div style={{ float: "left", width: "50vw", height: "90vh" }}>
+    <div style={{ float: 'left', width: '50vw', height: '90vh',  marginTop: '2%',}}>
       <MapWrapped
         googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyBWpKFJPb9PgqqPtB3YZScgx0MBaMt-vZ0`}
         loadingElement={<div style={{ height: `100` }} />}
